@@ -3,7 +3,7 @@
 
 Hibernate requires ORM mapping. ActiveJDBC requires instrumentation. This dbagent package is lighter and easier!
 
-###Assume we create an class of Organzition like below,
+Assume we create an class of Organzition like below,
 
 public class Organization { 
 &nbsp;&nbsp;    public String name;
