@@ -6,31 +6,31 @@ Hibernate requires ORM mapping. ActiveJDBC requires instrumentation. This dbagen
 ###Assume we create an class of Organzition like below,
 
 public class Organization { 
-    public String name;
-    public String homepage;
-    public double capital;
+&nbsp;&nbsp;    public String name;
+&nbsp;&nbsp;    public String homepage;
+&nbsp;&nbsp;    public double capital;
 
-  static {<br/>
-        String TABLENAME = "Organization";<br/>
-        String[] TABLEKEY = {"name"};<br/>
-        HashMap<String, Integer> hm = new HashMap();<br/>
-        hm.put("name", 20);<br/>
-        hm.put("homepage", 50); //Optional<br/>
-        dbagent = new MysqlAgent(Organization.class, TABLENAME, TABLEKEY, hm);<br/>
-        dbagent.createTable(); //Optional and only create table if not created yet.<br/>
-  } <br/>
-  public Organization() { // A Constructor without parameter must be here! Of course other Constructor can be created.<br/>
-  }<br/>
-  
-We can instantiate an Organization and save it to database like this:</p>
+&nbsp;&nbsp;  static {
+&nbsp;&nbsp;&nbsp;&nbsp;        String TABLENAME = "Organization";
+&nbsp;&nbsp;&nbsp;&nbsp;        String[] TABLEKEY = {"name"};
+&nbsp;&nbsp;&nbsp;&nbsp;        HashMap<String, Integer> hm = new HashMap();
+&nbsp;&nbsp;&nbsp;&nbsp;        hm.put("name", 20);
+&nbsp;&nbsp;&nbsp;&nbsp;        hm.put("homepage", 50); //Optional
+&nbsp;&nbsp;&nbsp;&nbsp;        dbagent = new MysqlAgent(Organization.class, TABLENAME, TABLEKEY, hm);
+&nbsp;&nbsp;&nbsp;&nbsp;        dbagent.createTable(); //Optional and only create table if not created yet.
+&nbsp;&nbsp;  }
+&nbsp;&nbsp;  public Organization() { // A Constructor without parameter must be here! Of course other Constructor can be created.
+&nbsp;&nbsp;  }
+}  
+We can instantiate an Organization and save it to database like this:
 
-  Organization orga = new Organziation();<br/>
-    orga.name = "antianything";<br/>
-    orga.homepage = "blala.org";<br/>
-    orga.capital = 3000;<br/>
-    Organization.dbagent.replaceToDB();<br/>
+&nbsp;&nbsp;  Organization orga = new Organziation();
+&nbsp;&nbsp;    orga.name = "antianything";
+&nbsp;&nbsp;    orga.homepage = "blala.org";<br/>
+&nbsp;&nbsp;    orga.capital = 3000;<br/>
+&nbsp;&nbsp;    Organization.dbagent.replaceToDB();<br/>
 
 Now we select from mysql database,
-    antianything            blala.org                  30000
+&nbsp;&nbsp;    antianything    &nbsp;&nbsp;&nbsp;&nbsp; blala.org   &nbsp;&nbsp;&nbsp;&nbsp; 30000
 
 Currently only MySQL agent is implemented.
