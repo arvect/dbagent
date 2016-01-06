@@ -22,10 +22,11 @@ public class Organization {
 &nbsp;&nbsp;  public Organization() { // A Constructor without parameter must be here! Of course other Constructor can be created.
 &nbsp;&nbsp;  }
 }  
+
 We can instantiate an Organization and save it to database like this:
 
-&nbsp;&nbsp;  Organization orga = new Organziation();
-&nbsp;&nbsp;    orga.name = "antianything";
+&nbsp;&nbsp;  Organization orga = new Organziation();<br/>
+&nbsp;&nbsp;    orga.name = "antianything";<br/>
 &nbsp;&nbsp;    orga.homepage = "blala.org";<br/>
 &nbsp;&nbsp;    orga.capital = 3000;<br/>
 &nbsp;&nbsp;    Organization.dbagent.replaceToDB();<br/>
