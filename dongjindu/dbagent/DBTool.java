@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Yetaai
+ * Copyright (c) 2014, Dong Jin Du
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package org.dongjindu.dbagent;
+package dongjindu.dbagent;
 
 import com.google.common.collect.TreeTraverser;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
@@ -81,20 +81,20 @@ public class DBTool {
 //            fis.close();
             String DRIVER_NAME = "com.mysql.jdbc.Driver"; //config.getString("com.mysql.jdbc.Driver");
             String URL = "jdbc:mysql://localhost:3306/findOpp"; //config.getString("jdbc:mysql:/localhost:3306/invest001");
-            String UNAME = "root"; //config.getString("root");
-            String PWD = "elttil"; //config.getString("elttil");
+            String UNAME = "***"; //config.getString("root");
+            String PWD = "****"; //config.getString("elttil");
             hmDataSource.put(DBTool.MAINDBCONN, setupDataSource(URL, DRIVER_NAME, UNAME, PWD));
 
             String DRIVER_NAME2 = "com.mysql.jdbc.Driver"; //config.getString("com.mysql.jdbc.Driver");
             String URL2 = "jdbc:mysql://localhost:3306/findOppTest"; //config.getString("jdbc:mysql:/localhost:3306/invest001");
-            String UNAME2 = "root"; //config.getString("root");
-            String PWD2 = "elttil"; //config.getString("elttil");
+            String UNAME2 = "***"; //config.getString("root");
+            String PWD2 = "****"; //config.getString("elttil");
             hmDataSource.put(DBTool.LOCALTESTDBCONN, setupDataSource(URL2, DRIVER_NAME2, UNAME2, PWD2));
 
             String URL1 = "jdbc:mysql://192.168.0.110:3306/findOppTest";//hp notebook c2630
             String DRIVER_NAME1 = "com.mysql.jdbc.Driver";
-            String UNAME1 = "root";
-            String PWD1 = "elttil";
+            String UNAME1 = "***";
+            String PWD1 = "*****";
             hmDataSource.put(DBTool.TESTDBCONN, setupDataSource(URL1, DRIVER_NAME1, UNAME1, PWD1));
 //            System.out.println("*******************************DB URL: " + URL + " *****************************");
         } catch (Exception ex) {
