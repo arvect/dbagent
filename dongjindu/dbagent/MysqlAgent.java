@@ -1,9 +1,10 @@
 /*
+ * @author Dong Jin Du
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.dongjindu.dbagent;
+package dongjindu.dbagent;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -18,10 +19,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- *
- * @author oefish
- */
 public class MysqlAgent<T> implements DBAgent<T> {
 
     static final private Logger logger = LoggerFactory.getLogger(MysqlAgent.class);
