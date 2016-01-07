@@ -52,10 +52,6 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- *
- * @author Yetaai
- */
 public class DBTool {
     private final static Logger logger = LoggerFactory.getLogger(DBTool.class);
     private static final HashMap<String, DataSource> hmDataSource = new HashMap();
